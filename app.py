@@ -451,7 +451,7 @@ def continentVisibility(at):
     Input('metric_dropdown', 'value')
 )
 def modifyMainGraphTitle(metric):
-  title = ['Share of Global Plastic Waste Emitted to the Ocean, 2019',
+  title = ['Share of Global Plastic Waste Emitted to the Ocean in 2019',
            'Mismanaged Plastic Waste Around the World']
   desc = ['The data is an annual estimate of plastic emission around the world.',
           'The data represents the sum of material which is either littered or inadequately disposed.']
