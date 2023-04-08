@@ -1,0 +1,9 @@
+python==3.11.0
+pandas
+xlrd
+fiona
+pyproj
+pycountry
+geopandas
+dash
+dash-bootstrap-components
