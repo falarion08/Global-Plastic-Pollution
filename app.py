@@ -47,7 +47,7 @@ x.rename(columns = {'Code Value': 'Code_Value'}, inplace = True)
 # Seperate the null values from the x dataframe and drops the null values in
 # dataframe x
 
-y = x.loc[x['Code_Value'].isna() == True]
+y = x.loc[x['Code_Value'].isna() == True].copy()
 x.dropna(inplace = True)
 
 def fill_code(country):
@@ -56,10 +56,10 @@ def fill_code(country):
     #  alpha 3 ISO code of a country.
       return pc.countries.search_fuzzy(country)[0].alpha_3
   except:
-    print(country + ' not found')
+    pass
 
 
-y['Country'].replace('Macau', 'Macao', regex = True, inplace = True)
+y['Country'] = y['Country'].replace({'Macau': 'Macao'})
 
 # Apply the fill_code function to the country attribute to fill in
 # the find the missing alpha 3 ISO code and return the results to the
